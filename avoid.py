@@ -25,7 +25,6 @@ stop_cmd.linear.x = 0.0
 #Calculate Moving Average
 def moving_average(msg):
     history = []
-    #sleep(.2)
     history.append(msg)
     
     if len(history) > 2000:
