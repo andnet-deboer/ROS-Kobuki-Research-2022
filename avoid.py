@@ -26,13 +26,11 @@ stop_cmd.linear.x = 0.0
 def moving_average(msg):
     history = []
     history.append(msg)
-    
     if len(history) > 2000:
-        history = history[-2000:]
-
+        history = history[-2000:
     average = sum(history) / float(len(history))
     return average
-   
+                          
 #Make Sound
 def sound(int):
     arlosound = rospy.Publisher('/arlo/mobile_base/commands/sound', Sound, queue_size=10)
@@ -104,7 +102,6 @@ def move_for_time(id ,linear, angular, time):
         
         break
        
-    
 #Move Forward 
 def moveforward(int):
     arlocmd_vel = rospy.Publisher("/arlo/mobile_base/commands/velocity", Twist, queue_size=10)
